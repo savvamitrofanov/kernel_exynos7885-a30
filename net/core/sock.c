@@ -148,11 +148,13 @@
 
 #include <net/busy_poll.h>
 
+#ifdef CONFIG_KNOX_NCM
 /* START_OF_KNOX_NPA */
 #include <linux/sched.h>
 #include <linux/pid.h>
 #include <net/ncm.h>
 /* END_OF_KNOX_NPA */
+#endif
 
 static DEFINE_MUTEX(proto_list_mutex);
 static LIST_HEAD(proto_list);
